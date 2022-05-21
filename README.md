@@ -1,6 +1,8 @@
 # Tprogramming_2022_zaochn
-
+### Kalin SA
 ### Установка виртуального окружения 
+
+
 
 ```shell
 pip install pipenv
