@@ -2,6 +2,8 @@
 
 ### Установка виртуального окружения 
 
+### Trofimov Maxim
+
 ```shell
 pip install pipenv
 ```
