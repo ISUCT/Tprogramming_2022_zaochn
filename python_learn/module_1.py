@@ -1,4 +1,4 @@
-a = 5
+a = 5 
 A = 6
 print(a, A)
 b = 5.5
@@ -19,14 +19,14 @@ print(snake_case)
 
 a = 5
 print(a)
-a = "Some string"
-print(a)
+ab = "Some string"
+print(ab)
 
 a = 4 + 8
 print(a)
 
-a = 5 / 2
-print(a)
+af = 5 / 2
+print(af)
 
 a = 5 // 2
 print(a)

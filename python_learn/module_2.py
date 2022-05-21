@@ -1,4 +1,4 @@
-a = 5
+a = 5 # type: int
 b = 6
 print(a >= b)
 
@@ -43,8 +43,8 @@ while i < 3:
     print("action in while")
 print("action after while")
 
-for i in "string":
-    print(i)
+for el in "string":
+    print(el)
 
 for i in range(1, 5):
     print(i)
