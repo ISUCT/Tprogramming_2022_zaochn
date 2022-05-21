@@ -8,7 +8,8 @@
 	"settings": {
 		"files.exclude": {
             "**/.git": true,
-        },
+		},
+		"python.pythonPath": "C:\\Users\\local\\.virtualenvs\\Tprogramming_2022_zaochn-4DKVKNfs\\Scripts\\python.exe",
 	},
 	"extensions": {
 		"recommendations": [
