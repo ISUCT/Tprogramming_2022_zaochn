@@ -22,6 +22,16 @@ class Player(ABC):
     def class_name(self):
         pass
 
+    @property
+    @abstractmethod
+    def ability_name(self):
+        pass
+
+    @property
+    @abstractmethod
+    def damage(self):
+        pass
+
     @abstractmethod
     def special_ability(self):
         pass

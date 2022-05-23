@@ -6,7 +6,9 @@ class Paladin(Player):
     def __init__(self):
         self.health = round(random.random() * 100)
         self.power = round(random.random() * 50)
+        self.damage = self.power
         self.class_name = "Паладин"
+        self.ability_name = "Удар возмездия"
 
     def health(self, value):
         return value
@@ -20,5 +22,13 @@ class Paladin(Player):
     def class_name(self, value):
         return value
 
-    def special_ability(self, ability):
-        print(f"Абилка: {ability}")
+    def ability_name(self, value):
+        return value
+
+    def damage(self, value):
+        return value
+
+    def special_ability(self):
+        self.damage = round(self.power * 1.3)
+        return self.damage
+        

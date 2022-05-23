@@ -4,23 +4,39 @@ from saga.mage import Mage
 from saga.paladin import Paladin
 from saga.player import Player
 
-
-
 def one_fight(player_1: Player, player_2: Player):
+
+    print(f"({player_1.class_name}) {player_1.name} vs ({player_2.class_name}) {player_2.name}")
+
     while(player_1.health > 0 and player_2.health > 0):
-        print(f"({player_1.class_name}) {player_1.name} vs ({player_2.class_name}) {player_2.name}")
-
-        player_2.health -= player_1.power
-        print(f"({player_1.class_name}) {player_1.name} наносит урон {player_1.power} противнику ({player_2.class_name}) {player_2.name}")
-        if player_2.health <= 0:
-            print(f"({player_2.class_name}) {player_2.name} погибает\n")
-            break
-
-        player_1.health -= player_2.power
-        print(f"({player_2.class_name}) {player_2.name} наносит урон {player_2.power} противнику ({player_1.class_name}) {player_1.name}")
-        if player_1.health <= 0:
-            print(f"({player_1.class_name}) {player_1.name} погибает\n")
-            break
+        
+        is_use_ability = random.choice([True, False])
+        if is_use_ability:
+            player_2.health -= player_1.special_ability()
+            print(f"({player_1.class_name}) {player_1.name} использует ({player_1.ability_name}) и наносит урон {player_1.damage} противнику ({player_2.class_name}) {player_2.name}")
+            if player_2.health <= 0:
+                print(f"({player_2.class_name}) {player_2.name} погибает\n")
+                break
+        else:
+            player_2.health -= player_1.damage
+            print(f"({player_1.class_name}) {player_1.name} наносит урон {player_1.damage} противнику ({player_2.class_name}) {player_2.name}")
+            if player_2.health <= 0:
+                print(f"({player_2.class_name}) {player_2.name} погибает\n")
+                break
+        
+        is_use_ability = random.choice([True, False])
+        if is_use_ability:
+            player_1.health -= player_2.special_ability()
+            print(f"({player_2.class_name}) {player_2.name} использует ({player_2.ability_name}) и наносит урон {player_2.damage} противнику ({player_1.class_name}) {player_1.name}")
+            if player_1.health <= 0:
+                print(f"({player_1.class_name}) {player_1.name} погибает\n")
+                break
+        else:
+            player_1.health -= player_2.damage
+            print(f"({player_2.class_name}) {player_2.name} наносит урон {player_2.damage} противнику ({player_1.class_name}) {player_1.name}")
+            if player_1.health <= 0:
+                print(f"({player_1.class_name}) {player_1.name} погибает\n")
+                break
     
     if player_1.health > 0:
         return player_1
@@ -44,7 +60,7 @@ if __name__ == "__main__":
     names = ["Ричард", "Кэлен", "Зеддикус", "Даркен Рал", "Геральт", "Цири", "Сангвиний", "Фулгрим"]
     random.shuffle(names)
     round = 1
-    count_players = 8
+    count_players = 2
     players = []
     for i in range(count_players):
         players.append(random.choice([Paladin(), Archer(), Mage()]))
