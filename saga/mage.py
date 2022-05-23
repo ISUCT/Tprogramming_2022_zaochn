@@ -4,10 +4,8 @@ from saga.player import Player
 class Mage(Player):
 
     def __init__(self):
-        names = ["Ричард", "Кэлен", "Зеддикус", "Даркен Рал"]
         self.health = round(random.random() * 100)
         self.power = round(random.random() * 50)
-        self.name = random.choice(names)
         self.class_name = "Маг"
 
     def health(self, value):
