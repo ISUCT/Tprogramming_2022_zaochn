@@ -31,11 +31,9 @@ class Archer(Player):
         return value
 
     def special_ability(self):
-        print(f"СТРЕЛЫ: {self.is_ability_activated}")
         if self.is_ability_activated == False:
             self.is_ability_activated = True
-            self.damage = 0
+            self.damage = self.power + 2
             return 0
         else:
-            self.damage = self.power + 2
             return self.damage

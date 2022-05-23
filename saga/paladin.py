@@ -29,6 +29,6 @@ class Paladin(Player):
         return value
 
     def special_ability(self):
-        self.damage = round(self.power * 1.3)
-        return self.damage
+        self.damage = self.power
+        return round(self.power * 1.3)
         

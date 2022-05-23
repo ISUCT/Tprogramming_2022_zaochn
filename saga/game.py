@@ -12,8 +12,9 @@ def one_fight(player_1: Player, player_2: Player):
         
         is_use_ability = random.choice([True, False])
         if is_use_ability:
-            player_2.health -= player_1.special_ability()
-            print(f"({player_1.class_name}) {player_1.name} использует ({player_1.ability_name}) и наносит урон {player_1.damage} противнику ({player_2.class_name}) {player_2.name}")
+            damage = player_1.special_ability()
+            player_2.health -= damage
+            print(f"({player_1.class_name}) {player_1.name} использует ({player_1.ability_name}) и наносит урон {damage} противнику ({player_2.class_name}) {player_2.name}")
             if player_2.health <= 0:
                 print(f"({player_2.class_name}) {player_2.name} погибает\n")
                 break
@@ -26,8 +27,9 @@ def one_fight(player_1: Player, player_2: Player):
         
         is_use_ability = random.choice([True, False])
         if is_use_ability:
-            player_1.health -= player_2.special_ability()
-            print(f"({player_2.class_name}) {player_2.name} использует ({player_2.ability_name}) и наносит урон {player_2.damage} противнику ({player_1.class_name}) {player_1.name}")
+            damage = player_2.special_ability()
+            player_1.health -= damage
+            print(f"({player_2.class_name}) {player_2.name} использует ({player_2.ability_name}) и наносит урон {damage} противнику ({player_1.class_name}) {player_1.name}")
             if player_1.health <= 0:
                 print(f"({player_1.class_name}) {player_1.name} погибает\n")
                 break
@@ -43,7 +45,7 @@ def one_fight(player_1: Player, player_2: Player):
     else:
         return player_2
 
-def full_fight(players: Player, round: int):
+def full_fight(players, round: int):
     winners = []
     print(f"Кон {round}.")
     while players:
@@ -60,14 +62,13 @@ if __name__ == "__main__":
     names = ["Ричард", "Кэлен", "Зеддикус", "Даркен Рал", "Геральт", "Цири", "Сангвиний", "Фулгрим"]
     random.shuffle(names)
     round = 1
-    count_players = 2
+    count_players = 8
     players = []
     for i in range(count_players):
         players.append(random.choice([Paladin(), Archer(), Mage()]))
 
     for el in players:
         el.name = names.pop()
-        print(f"Players: ({el.class_name}) {el.name}, {el.health}, {el.power}\n")
+        print(f"Player: ({el.class_name}) {el.name}, {el.health}, {el.power}\n")
     
     full_fight(players, round)
-    
