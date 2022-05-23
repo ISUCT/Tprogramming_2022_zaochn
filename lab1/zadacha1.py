@@ -16,4 +16,5 @@ def task_a(xn, xk, dx):
 
 if __name__ == "__main__":
         y= task_a(0.22, 0.92, 0,14)
+        
         print (y)    
