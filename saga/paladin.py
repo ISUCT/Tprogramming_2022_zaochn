@@ -9,6 +9,7 @@ class Paladin(Player):
         self.damage = self.power
         self.class_name = "Паладин"
         self.ability_name = "Удар возмездия"
+        self.is_ability_activated = False
 
     def health(self, value):
         return value
@@ -23,6 +24,9 @@ class Paladin(Player):
         return value
 
     def ability_name(self, value):
+        return value
+
+    def is_ability_activated(self, value):
         return value
 
     def damage(self, value):

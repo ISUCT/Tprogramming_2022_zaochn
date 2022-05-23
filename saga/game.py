@@ -41,8 +41,10 @@ def one_fight(player_1: Player, player_2: Player):
                 break
     
     if player_1.health > 0:
+        player_1.is_ability_activated = False
         return player_1
     else:
+        player_2.is_ability_activated = False
         return player_2
 
 def full_fight(players, round: int):
@@ -62,7 +64,7 @@ if __name__ == "__main__":
     names = ["Ричард", "Кэлен", "Зеддикус", "Даркен Рал", "Геральт", "Цири", "Сангвиний", "Фулгрим"]
     random.shuffle(names)
     round = 1
-    count_players = 8
+    count_players = 4
     players = []
     for i in range(count_players):
         players.append(random.choice([Paladin(), Archer(), Mage()]))

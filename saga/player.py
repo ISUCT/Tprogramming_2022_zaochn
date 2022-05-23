@@ -29,6 +29,11 @@ class Player(ABC):
 
     @property
     @abstractmethod
+    def is_ability_activated(self):
+        pass
+    
+    @property
+    @abstractmethod
     def damage(self):
         pass
 

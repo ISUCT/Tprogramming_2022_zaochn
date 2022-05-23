@@ -3,14 +3,13 @@ from saga.player import Player
 
 class Mage(Player):
 
-    is_ability_activated = False 
-
     def __init__(self):
         self._health = round(random.random() * 100)
         self.power = round(random.random() * 50)
         self.damage = self.power
         self.class_name = "Маг"
         self.ability_name = "Заворожение"
+        self.is_ability_activated = False
 
     @property
     def health(self):
@@ -35,6 +34,9 @@ class Mage(Player):
         return value
 
     def ability_name(self, value):
+        return value
+
+    def is_ability_activated(self, value):
         return value
 
     def damage(self, value):

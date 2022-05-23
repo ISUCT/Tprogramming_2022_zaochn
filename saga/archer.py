@@ -3,14 +3,13 @@ from saga.player import Player
 
 class Archer(Player):
 
-    is_ability_activated = False 
-
     def __init__(self):
         self.health = round(random.random() * 100)
         self.power = round(random.random() * 50)
         self.damage = self.power
         self.class_name = "Лучник"
         self.ability_name = "Огненные стрелы"
+        self._is_ability_activated = False
 
     def health(self, value):
         return value
@@ -25,7 +24,17 @@ class Archer(Player):
         return value
 
     def ability_name(self, value):
-        return value   
+        return value  
+
+    @property
+    def is_ability_activated(self):
+        return self._is_ability_activated
+
+    @is_ability_activated.setter
+    def is_ability_activated(self, newValue):
+        if newValue == False:
+            self.damage = self.power
+        self._is_ability_activated = newValue
 
     def damage(self, value):
         return value
