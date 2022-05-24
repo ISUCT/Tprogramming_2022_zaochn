@@ -2,12 +2,12 @@ import math;
 
 def kghjy (a: float, b: float,x: float)-> float:
 
-    qwert = math.acos((x**2)-(b**2))
+    chislitel = math.acos((x**2)-(b**2))
 
     znamenatel = math.asin((x**2)-(a**2))
 # math.acos - функция вычисл. аркос
 # получаем у
-    y=qwert/znamenatel;
+    y=chislitel/znamenatel;
 
     return y;
 if __name__ =="main":
@@ -18,4 +18,4 @@ if __name__ =="main":
 
     
 if __name__ == "main":
-   print(hhh(0.05, 0.06, 0.15));
+   print(hhh(0.05, 0.06, 0.15)); 
