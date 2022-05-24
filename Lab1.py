@@ -1,30 +1,35 @@
 import math
 
-# def calc(a:float, b: float, x: float) -> float:
-def calc(a, b, x):
-    chisl = (math.sin(a + b*x))**3.5
-    znamen = 1 + math.cos(abs(math.log(a + b*x, 2)))
-    y = chisl / znamen
+
+def example(a: float, b: float, x: float) -> float:
+    one = math.pow((a * x + b), 1 / 3)
+    two = math.log2(x)
+    y = one / two
     return y
 
-def task_a(a, b, xn, xk, dx):
+
+def example_a(a, b, xn, xk, dx):
     x = xn
     y = []
     while x <= xk:
-        y_tmp = calc(a, b, x)
+        y_tmp = example(a, b, x)
         y.append(y_tmp)
         x += dx
     return y
 
-def task_b(a, b, x):
+
+def example_b(a, b, x):
     y = []
     for item in x:
-        y.append(calc(a, b, item))
+        y.append(example(a, b, item))
     return y
 
 if __name__ == "__main__":
-    print(calc(2.5, 4.6, 1.15))
-    y = task_a(2.5, 4.6, 1.15, 3.05, 0.38)
+
+    print(example(1.35, 0.98, 1.14))
+
+    y = example_a(1.35, 0.98, 1.14, 4.24, 0.62)
     print(y)
-    y = task_b(2.5, 4.6,[1.2, 1.36, 1.57, 1.93, 2.25])
+
+    y = example_b(1.35, 0.98, [0.35, 1.28, 3.51, 5.21, 4.16])
     print(y)
