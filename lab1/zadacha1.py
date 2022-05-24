@@ -2,7 +2,7 @@ import math
 
 
 def calc(x:float) -> float:
-    chisl = (math.asin(x)**4 + math.acos(x)**6)*1/7
+    y = (math.asin(x)**4 + math.acos(x)**6)*1/7
     return y
 
 def task_a(xn, xk, dx):
@@ -14,7 +14,14 @@ def task_a(xn, xk, dx):
            x += dx
         return y
 
+def task_b(x):
+        y=[]
+        for item in x:
+                y.append(calc(item))
+                return y        
+
 if __name__ == "__main__":
-        y= task_a(0.22, 0.92, 0,14)
-        
+        y= task_a(0.22, 0.92, 0.14)
+        print (y)
+        y=task_b([0.1, 0,35, 0,4, 0.55, 0.6])
         print (y)    
