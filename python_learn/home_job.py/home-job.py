@@ -24,11 +24,12 @@ def example_b(a, b, x):
         y.append(example(a, b, item))
     return y
 
+if __name__ == "__main__":    
 
-print(example(2, 0.95, 1.25))
+    print(example(2, 0.95, 1.25))
 
-y = example_a(2, 0.95, 1.25, 2.75, 0.3)
-print(y)
+    y = example_a(2, 0.95, 1.25, 2.75, 0.3)
+    print(y)
 
-y = example_b(2, 0.95, [2.2, 3.78, 4.51, 6.58, 1.2])
-print(y)
+    y = example_b(2, 0.95, [2.2, 3.78, 4.51, 6.58, 1.2])
+    print(y)
