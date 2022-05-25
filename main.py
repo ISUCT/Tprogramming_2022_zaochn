@@ -1,4 +1,4 @@
-print("Hello world")
+print("Ковязин Ян Алексеевич")
 a = 1
 width = 5
 height = 7

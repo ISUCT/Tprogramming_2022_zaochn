@@ -1,7 +1,7 @@
 # Tprogramming_2022_zaochn
 
 ### Установка виртуального окружения 
-
+Ковязин Ян Алексеевич
 ```shell
 pip install pipenv
 ```
