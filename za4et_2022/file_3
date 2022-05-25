@@ -2,7 +2,7 @@ import files
 q = files.q
 print (list(q))
 a= len (q)
-print (a)
+print ("всего символов" + a)
 c=0
 i = 0
 a=int(a)
@@ -18,7 +18,6 @@ for i in range(0, a, 1):
         c=c+1
         b=b-1
 if c >= 1:
-    print ("False")
+    print ("не является палиндромом" + "end")
 else:
-    print ("True")
-print ("end")
+    print ("является палиндромом" + "end")
