@@ -1,0 +1,23 @@
+import files
+q = files.q
+print (list(q))
+a= len (q)
+print ("всего символов" + a)
+c=0
+i = 0
+a=int(a)
+b=a-1
+a=a/2
+а= round (a)
+a=int(float(a))
+for i in range(0, a, 1):
+    if q[i] == q[b]:
+        c=c+0
+        b=b-1
+    else :
+        c=c+1
+        b=b-1
+if c >= 1:
+    print ("не является палиндромом" + "end")
+else:
+    print ("является палиндромом" + "end")
