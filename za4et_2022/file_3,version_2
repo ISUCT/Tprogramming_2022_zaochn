@@ -1,0 +1,8 @@
+q = "54321"
+w = "12345"
+q=list(q)
+w=list(w)
+if q.sort() == w.sort():
+   print('Списки идентичны')
+else:
+   print('Списки не идентичны')
