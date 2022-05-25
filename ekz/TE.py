@@ -1,7 +1,3 @@
-#x=1
-#print(x)
-
-
 def deistvie(x,xk):
     if x<=xk:
         for number in range(1,xk,1):
