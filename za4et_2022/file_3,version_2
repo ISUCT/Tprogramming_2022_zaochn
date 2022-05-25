@@ -1,5 +1,7 @@
-q = "54321"
-w = "12345"
+e= "1234554321"
+r=e/round(len(e))
+q=e[:r]
+w=e[r:]
 q=list(q)
 w=list(w)
 if q.sort() == w.sort():
