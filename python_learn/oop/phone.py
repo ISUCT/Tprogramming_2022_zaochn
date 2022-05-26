@@ -29,3 +29,6 @@ class Phone:
     
     def accept_call(self) -> None:
         print(f"{self.__name} принимаю звонок")
+
+if __name__ == "__main__":
+    print("hello")
