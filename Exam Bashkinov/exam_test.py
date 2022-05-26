@@ -23,3 +23,6 @@ class SummTest(TestCase):
 
     def test_only_b(self):
         self.assertEqual(22, exam.summ(b=20)) # Тестируем указываем только 2 аргумент
+
+    def test_only_otr(self):
+        self.assertEqual(6, exam.summ(-3, -3)) # Тестируем с отрицательными аргументами 
