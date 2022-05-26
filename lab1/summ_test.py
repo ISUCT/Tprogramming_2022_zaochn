@@ -23,5 +23,8 @@ class TestSumm(unittest.TestCase):
         res = exam.summ(0, 0)
         self.assertEqual(res)
 
+    def test_positive(self):
+        res = exam.summ(10, 15)
+        self.assertEqual(res)
 if __name__ == '__main__':
     unittest.main()
