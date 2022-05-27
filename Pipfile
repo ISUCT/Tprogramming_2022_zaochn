@@ -4,10 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+flask = "*"
 
 [dev-packages]
 mypy = "*"
 flake8 = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
