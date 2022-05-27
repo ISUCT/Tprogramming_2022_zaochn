@@ -29,6 +29,9 @@ def task_b(a, b, x):
 if __name__ == "__main__":
     print(calc(2.5, 4.6, 1.15))
     x, y = task_a(2.5, 4.6, 1.15, 3.05, 0.38) # (x,y)
-    print(x, y)
+
+    for i in range(len(x)):
+        print(f"x={x[i]}    y={y[i]}")
+        
     y = task_b(2.5, 4.6,[1.2, 1.36, 1.57, 1.93, 2.25])
     print(y)
