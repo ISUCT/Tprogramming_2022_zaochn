@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "files.exclude": {
         "**/.git": true
     },
     "python.pythonPath": "C:\\Users\\local\\.virtualenvs\\Tprogramming_2022_zaochn-4DKVKNfs\\Scripts\\python.exe"
 }
+=======
+    "python.pythonPath": "C:\\Users\\local\\.virtualenvs\\Tprogramming_2022_zaochn-4DKVKNfs\\Scripts\\python.exe"
+}
+>>>>>>> 6d34cd395738a3e9334db162c70ffa89ae77716b

@@ -7,10 +7,11 @@
         
 
         {
-            "name": "Python: Current File",
+            "name": "Python: Текущий файл",
             "type": "python",
             "request": "launch",
             "program": "${file}",
+<<<<<<< HEAD
             "console": "integratedTerminal",
             "justMyCode": true
         },
@@ -29,6 +30,9 @@
             ],
             "jinja": true,
             "justMyCode": true
+=======
+            "console": "integratedTerminal"
+>>>>>>> 6d34cd395738a3e9334db162c70ffa89ae77716b
         }
     ]
 }
