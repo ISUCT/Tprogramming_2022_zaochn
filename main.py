@@ -1,6 +1,7 @@
-print("Hello world")
-a = 1
-width = 5
-height = 7
-square = width * height
-print(f"Square = {square}")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
