@@ -4,11 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+flask = "*"
 
 [dev-packages]
 mypy = "*"
 flake8 = "*"
 pylint = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.8"
