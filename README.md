@@ -1,7 +1,7 @@
 # Tprogramming_2022_zaochn
+### Arakelov_Leonid_Olegovich
 
 ### Установка виртуального окружения 
-
 ```shell
 pip install pipenv
 ```
