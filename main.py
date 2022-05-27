@@ -1,4 +1,4 @@
-print("Hello world")
+asasasprint("Hello world")
 a = 1
 width = 5
 height = 7
