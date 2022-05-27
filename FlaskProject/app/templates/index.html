@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+    
+
+{% block content %}
+    <a href="{{ url_for('deleteAll') }}">Clear all</a>
+    
+    <h1>All employers</h1>
+    {% for em in employers %}
+    <div><p>Name: <b>{{ em.name }}</b></p></div>
+    <div><p>Surname: <b>{{ em.surname }}</b></p></div>
+    <div><p>Age: <b>{{ em.age }}</b></p></div>
+    <div><p>Date of employment: <b>{{ em.date_employment }}</b></p></div>
+    
+    {% endfor %}
+{% endblock %}
