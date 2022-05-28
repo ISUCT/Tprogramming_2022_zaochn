@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }} - Microblog</title>
+</head>
+
+<body>
+
+    {% if timeOfDay == 'morning' %}
+    <h1>Good morning, {{ user.username }}</h1>
+    <p><img src="../images/website.jpg" alt="" width="150px" height="150px"></p> 
+
+    {% elif timeOfDay == 'day' %}
+    <h1>Good day, {{ user.username }}</h1>
+
+    {% elif timeOfDay == 'evening' %}
+    <h1>Good evening, {{ user.username }}</h1>
+
+    {% else %}
+    <h1>Good night, {{ user.username }}</h1>
+
+    {% endif %}
+
+    <ul>
+        {% for element in items %}
+        <li>{{element}}</li>
+
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>

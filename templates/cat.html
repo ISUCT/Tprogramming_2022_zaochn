@@ -1,0 +1,17 @@
+{% extends 'baseCat.html' %}
+{% block main %}
+
+<h1>{{cat.name}}</h1>
+
+<ul>
+    <li>
+        Возраст: {{cat.age}}
+    </li>
+    {% if cat.img %}
+        <li>
+            <img src="{{cat.img}}" alt="">
+        </li>
+    {% endif %}
+</ul>
+
+{% endblock %}
