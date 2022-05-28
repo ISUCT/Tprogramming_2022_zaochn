@@ -1,11 +1,6 @@
-from turtle import title
 from flask import Flask, render_template
 from datetime import datetime
 
-app = Flask(__name__)
-from flask import Flask
-from datetime import datetime
-from flask import render_template
 from flask import request
 
 app = Flask(__name__)
@@ -44,6 +39,8 @@ def hello_styles():
     <p>Времы судного дня {now}</p>
     """
 
-@app.route("/calc")
+@app.route('/calc', methods=['GET', 'POST'])
 def calc():
-    return render_template("calc.html")
+    a = request.form.get("a",default=0,type=float)
+    b = request.form.get("b",default=0,type=float)
+    return render_template("calc.html", a=a, b=b, result=a+b)
