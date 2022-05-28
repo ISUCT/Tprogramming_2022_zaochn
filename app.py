@@ -1,3 +1,4 @@
+from unicodedata import name
 from flask import Flask, render_template
 from datetime import datetime
 
@@ -48,11 +49,27 @@ def calc():
 import cat
 
 cats = {
-    "valya": cat.Cat("vasya", 3),
+    "vasya": cat.Cat("vasya", 3),
     "barsik": cat.Cat("barsik", 3),
     "murzik": cat.Cat("murzik", 3),
 }
 
 @app.route('/cats')
 def list_cats():
-    return render_template("cats.html", cats=cats)
+    return render_template("cats.html", cats = cats)
+
+@app.route("/cats/<name>")
+def show_cat(name):
+    cat = cats[name]
+    return render_template("cat.html", cat = cat)
+
+@app.route("/cats/new", methods=["GET", "POST"])
+def create_cat():
+    name = request.form.get("name",default="untitled")
+    age = request.form.get("age",default=0,type=float)
+    
+    new_cat = cat.Cat(name, age)
+
+    cats[new_cat.name] = new_cat
+
+    return render_template("new_cat.html")

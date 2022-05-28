@@ -3,7 +3,12 @@
 <h1>Киски:</h1>
 <ul>
     {% for key, cat in cats.items() %}
-        <li>{{ cat.name }}</li>
+        <li>
+            <a href="{{'cats/%s' % cat.name}}"> {{ cat.name }}</a>
+        </li>
     {% endfor %}
 </ul>
+
+<a href="cats/new" class="btn btn-primary" role="button">Добавить</a>
+
 {% endblock %}
