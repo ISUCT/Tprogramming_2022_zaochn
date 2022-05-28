@@ -1,0 +1,13 @@
+{% extends "base_cat.html" %}
+{% block main %} 
+<h1>Котики:</h1>
+<ul>
+    {% for key, cat in cats.items() %}
+        <li>
+            <a href="{{'cats/%s' % cat.name}}">{{ cat.name }}
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="cats/new"><h2>Добавить</h2></a>
+{% endblock %}
