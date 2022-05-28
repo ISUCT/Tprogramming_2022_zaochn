@@ -1,0 +1,22 @@
+import math
+from re import X
+from tkinter import Y
+def calc(x: float) float:
+    return (math.asin(x)*4+math.acos(x)*6)*1/7
+def task_a(xn,xkm,dx):
+    x=xn
+    y=[]
+    while x <=xk:
+        y_tmp=calc(x)
+        y.append(y_tmp)
+        x += dx
+    return (y)
+def task_b(x):
+    y=[]
+    for item in x:
+        y.append(calc(item))
+if __name__ = "__main__":
+    y= task_a(0.22,0.92,0.14)
+    print (y)
+    y=task_b([0.1,0.35,0.4,0.55,0.6])
+    print (X)

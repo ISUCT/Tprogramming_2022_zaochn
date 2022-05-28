@@ -1,6 +1,7 @@
 # Tprogramming_2022_zaochn
 
 ### Установка виртуального окружения 
+Инталов Павел Иванович
 
 ```shell
 pip install pipenv
