@@ -29,7 +29,7 @@ def simple():
     a = request.args.get("a", default=5,type=float)
     b = request.args.get("b", default=10)
     return f"<h1>{a}+{b}={a+b}</h1>"
-
+    
 @app.route("/Hello")
 def hello_world():
     now = datetime.now()
@@ -43,3 +43,7 @@ def hello_styles():
     <p>О ПРЕКРАСНЫЙ СУП НАВАРИЛИ!</p>
     <p>Времы судного дня {now}</p>
     """
+
+@app.route("/calc")
+def calc():
+    return render_template("calc.html")
