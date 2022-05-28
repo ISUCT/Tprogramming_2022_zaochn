@@ -43,3 +43,28 @@ def calc():
     b = request.form.get("b", default=0, type=float)
     print(a,b)
     return render_template("calc.html", a=a, b=b, result=a+b)
+
+import cat
+
+cats = {
+    "vasya": cat.Cat("vasya", 3),
+    "barsik": cat.Cat("barsik", 3),
+    "murzik": cat.Cat("murzik", 3), 
+}
+
+@app.route('/cats')
+def list_cats():
+    return render_template("cats.html", cats = cats)
+
+@app.route("/cats/<name>")
+def fish(name):
+    cat=cats[name]
+    return render_template("cat.html", cat=cat)
+
+@app.route("/cats/new",methods=['GET', 'POST'])
+def create_cat():
+    a = request.form.get("a", default=0, type=float)
+    b = request.form.get("b", default=0, type=float)
+    print(a,b)
+    return render_template("calc.html", a=a, b=b, result=a+b)
+    pass
