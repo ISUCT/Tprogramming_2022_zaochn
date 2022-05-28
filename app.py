@@ -6,6 +6,7 @@ app = Flask(__name__)
 from flask import Flask
 from datetime import datetime
 from flask import render_template
+from flask import request
 
 app = Flask(__name__)
 
@@ -22,6 +23,12 @@ def index():
     items = ["один", "два", "три", "четыре", "пять"]
 
     return render_template('index.html', title='home', user=user, time_of_day=time_of_day, items=items, )
+
+@app.route("/simple")
+def simple():
+    a = request.args.get("a", default=5,type=float)
+    b = request.args.get("b", default=10)
+    return f"<h1>{a}+{b}={a+b}</h1>"
 
 @app.route("/Hello")
 def hello_world():
