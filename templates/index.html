@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{{ title }} - Microblog</title>
+    </head>
+    <body>
+        {% if time_of_day == "morning" %}
+            <h1>Good morning, {{ user.username }}!</h1>
+        {% elif time_of_day == "day" %}
+            <h1>Have a nice day, {{ user.username }}!</h1>
+        {% elif time_of_day == "evening" %}
+            <h1>Good evening, {{ user.username }}!</h1>
+        {% else %}
+            <h1>Good night, {{ user.username }}!</h1>
+        {% endif %}
+        <ul>
+            {% for element in items %}
+                <li>{{element}}</li>
+            {% endfor %}
+        </ul>
+        <a href="http://127.0.0.1:5000/calculator_ok" role="link"><h2>Калькулятор</h2>
+        <a href="http://127.0.0.1:5000/cats" role="link"><h2>Наши коты</h2>
+        <a href="http://127.0.0.1:5000/cats/new" role="link"><h2>Добавить кота</h2>
+    </body>
+</html>
