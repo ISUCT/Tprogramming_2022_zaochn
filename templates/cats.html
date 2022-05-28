@@ -1,0 +1,9 @@
+{% extends "base_cat.html" %}
+{% block main %} 
+<h1>Киски:</h1>
+<ul>
+    {% for key, cat in cats.items() %}
+        <li>{{ cat.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
