@@ -4,6 +4,21 @@
         <title>{{ title }} - Microblog</title>
     </head>
     <body>
-        <h1>Да будет с тобой святой машинный код, {{ user.username }}!</h1>
+        {% if time_of_day == "morning" %}
+        <h1>Да будет с тобой святой машинный код 1, {{ user.username }}!</h1>
+        <img src="./xxx.jpg" alt="икона" width="100" height="80" />
+        {% elif time_of_day == "day" %}
+        <h1>Да будет с тобой святой машинный код 2, {{ user.username }}!</h1>
+        <p><img src="./ххх.jpg" alt="икона" width="100" height="80"></p>
+        {% elif time_of_day == "evening" %}
+        <h1>Да будет с тобой святой машинный код 3, {{ user.username }}!</h1>
+        {% else %}
+        <h1>Да будет с тобой святой машинный код 4, {{ user.username }}!</h1>
+        {% endif %}
+        <ul>
+            {% for element in items %}    
+               <li>{{element}}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
